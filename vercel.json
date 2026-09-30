@@ -1,20 +1,35 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "builds": [
+  "buildCommand": "cd frontend/stockpulse-ui && npm install && npm run build",
+  "outputDirectory": "frontend/stockpulse-ui/dist",
+  "framework": "vite",
+  "rewrites": [
     {
-      "src": "frontend/stockpulse-ui/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "source": "/api/(.*)",
+      "destination": "https://stockpulse-api.onrender.com/$1"
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/api/(.*)",
-      "destination": "https://stockpulse-api.onrender.com/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/stockpulse-ui/$1"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ]
 }
