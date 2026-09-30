@@ -1,3 +1,3 @@
 // API Configuration
-// Uses the Vercel service binding to reach the backend API
-export const API_BASE = '/api';
+// Points to the backend API deployed on Render
+export const API_BASE = import.meta.env.VITE_API_URL || 'https://stockpulse-api.onrender.com';
