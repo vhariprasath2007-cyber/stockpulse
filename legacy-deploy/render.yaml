@@ -1,0 +1,32 @@
+services:
+  # Backend API Service
+  - type: web
+    name: stockpulse-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    region: oregon
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # Set in Render dashboard
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    healthCheckPath: /health
+    autoDeploy: true
+
+  # Frontend Static Site (optional - if not using Vercel)
+  # - type: web
+  #   name: stockpulse-frontend
+  #   runtime: docker
+  #   dockerfilePath: ./frontend/stockpulse-ui/Dockerfile
+  #   dockerContext: ./frontend/stockpulse-ui
+  #   region: oregon
+  #   plan: free
+  #   envVars:
+  #     - key: VITE_API_BASE
+  #       value: https://stockpulse-api.onrender.com
+  #   autoDeploy: true
+
+
+databases: []
