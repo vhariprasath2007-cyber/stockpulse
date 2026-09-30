@@ -3,6 +3,9 @@
   "buildCommand": "cd frontend/stockpulse-ui && npm install && npm run build",
   "outputDirectory": "frontend/stockpulse-ui/dist",
   "framework": "vite",
+  "env": {
+    "VITE_API_URL": "@vite_api_url"
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
