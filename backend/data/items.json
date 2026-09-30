@@ -1,0 +1,20 @@
+[
+  {
+    "item_id": "ORS",
+    "item_name": "Oral Rehydration Salts",
+    "category": "medicine",
+    "unit": "packets"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "item_name": "Measles Vaccine",
+    "category": "vaccine",
+    "unit": "doses"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "item_name": "Paracetamol 500mg",
+    "category": "medicine",
+    "unit": "tablets"
+  }
+]

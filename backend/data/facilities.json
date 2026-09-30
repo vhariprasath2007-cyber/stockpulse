@@ -1,0 +1,42 @@
+[
+  {
+    "facility_id": "PHC_01",
+    "name": "PHC Madurai North",
+    "latitude": 9.9252,
+    "longitude": 78.1198,
+    "district": "Madurai",
+    "type": "PHC"
+  },
+  {
+    "facility_id": "PHC_02",
+    "name": "PHC Madurai South",
+    "latitude": 9.88,
+    "longitude": 78.12,
+    "district": "Madurai",
+    "type": "PHC"
+  },
+  {
+    "facility_id": "PHC_03",
+    "name": "PHC Thirumangalam",
+    "latitude": 9.79,
+    "longitude": 77.98,
+    "district": "Madurai",
+    "type": "PHC"
+  },
+  {
+    "facility_id": "PHC_04",
+    "name": "PHC Melur",
+    "latitude": 10.03,
+    "longitude": 78.33,
+    "district": "Madurai",
+    "type": "PHC"
+  },
+  {
+    "facility_id": "PHC_05",
+    "name": "CHC Usilampatti",
+    "latitude": 9.97,
+    "longitude": 77.78,
+    "district": "Madurai",
+    "type": "CHC"
+  }
+]

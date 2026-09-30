@@ -1,0 +1,107 @@
+[
+  {
+    "item_id": "ORS",
+    "facility_id": "PHC_01",
+    "current_stock": 40,
+    "supplier_lead_time_days": 3,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "facility_id": "PHC_01",
+    "current_stock": 120,
+    "supplier_lead_time_days": 7,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "facility_id": "PHC_01",
+    "current_stock": 5000,
+    "supplier_lead_time_days": 2,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "ORS",
+    "facility_id": "PHC_02",
+    "current_stock": 180,
+    "supplier_lead_time_days": 3,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "facility_id": "PHC_02",
+    "current_stock": 150,
+    "supplier_lead_time_days": 7,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "facility_id": "PHC_02",
+    "current_stock": 4500,
+    "supplier_lead_time_days": 2,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "ORS",
+    "facility_id": "PHC_03",
+    "current_stock": 200,
+    "supplier_lead_time_days": 3,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "facility_id": "PHC_03",
+    "current_stock": 100,
+    "supplier_lead_time_days": 7,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "facility_id": "PHC_03",
+    "current_stock": 6000,
+    "supplier_lead_time_days": 2,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "ORS",
+    "facility_id": "PHC_04",
+    "current_stock": 500,
+    "supplier_lead_time_days": 3,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "facility_id": "PHC_04",
+    "current_stock": 80,
+    "supplier_lead_time_days": 7,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "facility_id": "PHC_04",
+    "current_stock": 3000,
+    "supplier_lead_time_days": 2,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "ORS",
+    "facility_id": "PHC_05",
+    "current_stock": 300,
+    "supplier_lead_time_days": 3,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "MEASLES_VAX",
+    "facility_id": "PHC_05",
+    "current_stock": 200,
+    "supplier_lead_time_days": 7,
+    "last_updated": "2026-09-24T08:00:00"
+  },
+  {
+    "item_id": "PARACETAMOL",
+    "facility_id": "PHC_05",
+    "current_stock": 8000,
+    "supplier_lead_time_days": 2,
+    "last_updated": "2026-09-24T08:00:00"
+  }
+]

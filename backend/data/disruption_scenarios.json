@@ -1,0 +1,8 @@
+[
+  {
+    "scenario_id": "SUPPLIER_DELAY_3D_ORS",
+    "item_id": "ORS",
+    "facility_id": "PHC_01",
+    "delay_days": 3
+  }
+]
