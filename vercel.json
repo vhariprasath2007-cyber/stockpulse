@@ -1,30 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "api": {
-      "root": "backend",
-      "runtime": "python@3.11",
-      "buildCommand": "pip install -r requirements.txt"
-    },
-    "web": {
-      "root": "frontend/stockpulse-ui",
-      "framework": "vite",
-      "buildCommand": "npm install && npm run build",
-      "outputDirectory": "dist"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "api"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "web"
-      }
-    }
+  "builds": [
+    { "src": "api/index.py", "use": "@vercel/python" },
+    { "src": "frontend/stockpulse-ui/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py" },
+    { "src": "/(.*)", "dest": "/frontend/stockpulse-ui/$1" }
   ]
 }
