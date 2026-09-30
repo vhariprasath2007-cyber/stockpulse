@@ -3,15 +3,6 @@
   "buildCommand": "cd frontend/stockpulse-ui && npm install && npm run build",
   "outputDirectory": "frontend/stockpulse-ui/dist",
   "framework": "vite",
-  "env": {
-    "VITE_API_URL": "https://stockpulse-api.onrender.com"
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://stockpulse-api.onrender.com/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
