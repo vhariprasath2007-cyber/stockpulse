@@ -42,7 +42,6 @@ function App() {
         <FacilityDetail 
           facilityId={selectedFacility}
           onRecommendClick={(itemId, facilityId) => setShowRecommendation({itemId, facilityId})}
-          onSimulateClick={(itemId, facilityId) => setShowSimulation({itemId, facilityId})}
         />
       )}
 
@@ -59,7 +58,6 @@ function App() {
         <GeminiQuery
           itemId={showSimulation.itemId}
           facilityId={showSimulation.facilityId}
-          onClose={() => setShowSimulation(null)}
         />
       )}
     </div>

@@ -45,8 +45,8 @@ export default function RecommendationPanel({ itemId, facilityId, onClose, onApp
         }
         setLoading(false);
       })
-      .catch((err: Error) => {
-        setError(err.message);
+      .catch((err: unknown) => {
+        setError(err instanceof Error ? err.message : 'Failed to get recommendation');
         setLoading(false);
       });
   }, [itemId, facilityId]);
@@ -74,7 +74,7 @@ export default function RecommendationPanel({ itemId, facilityId, onClose, onApp
       if (!res.ok) throw new Error('Failed to get explanation');
       const data = await res.json();
       setExplanation(data.explanation);
-    } catch (err) {
+    } catch (err: unknown) {
       setExplanation('Unable to generate explanation at this time.');
     } finally {
       setExplaining(false);
@@ -98,8 +98,8 @@ export default function RecommendationPanel({ itemId, facilityId, onClose, onApp
       if (!res.ok) throw new Error('Failed to apply transfer');
       await res.json();
       onApply();
-    } catch (err: Error) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Failed to apply transfer');
       setApplying(false);
     }
   };

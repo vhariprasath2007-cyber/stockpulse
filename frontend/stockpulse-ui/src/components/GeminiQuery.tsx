@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 
 const API_BASE = 'http://localhost:8000';
 
@@ -41,7 +41,7 @@ export default function GeminiQuery({ itemId, facilityId }: GeminiQueryProps) {
       if (!res.ok) throw new Error('Failed to get explanation');
       const data = await res.json();
       setResponse(data.explanation);
-    } catch (err: Error) {
+    } catch (err: unknown) {
       setResponse('Unable to generate explanation at this time.');
     } finally {
       setLoading(false);
