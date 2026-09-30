@@ -4,7 +4,7 @@
   "outputDirectory": "frontend/stockpulse-ui/dist",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "@vite_api_url"
+    "VITE_API_URL": "https://stockpulse-api.onrender.com"
   },
   "rewrites": [
     {
