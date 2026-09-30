@@ -1,11 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "builds": [
-    { "src": "api/index.py", "use": "@vercel/python" },
-    { "src": "frontend/stockpulse-ui/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+    {
+      "src": "frontend/stockpulse-ui/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.py" },
-    { "src": "/(.*)", "dest": "/frontend/stockpulse-ui/$1" }
+    {
+      "src": "/api/(.*)",
+      "destination": "https://stockpulse-api.onrender.com/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/stockpulse-ui/$1"
+    }
   ]
 }
