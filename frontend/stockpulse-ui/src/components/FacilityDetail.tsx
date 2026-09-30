@@ -5,7 +5,6 @@ const API_BASE = 'http://localhost:8000';
 interface FacilityDetailProps {
   facilityId: string;
   onRecommendClick: (itemId: string, facilityId: string) => void;
-  onSimulateClick: (itemId: string, facilityId: string) => void;
 }
 
 interface StockItem {
@@ -38,7 +37,7 @@ const getRunwayWidth = (days: number, leadTime: number) => {
   return Math.min(100, Math.max(0, (days / maxDays) * 100));
 };
 
-export default function FacilityDetail({ facilityId, onRecommendClick, onSimulateClick }: FacilityDetailProps) {
+export default function FacilityDetail({ facilityId, onRecommendClick }: FacilityDetailProps) {
   const [data, setData] = useState<FacilityDetailData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

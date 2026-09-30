@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 
 const API_BASE = 'http://localhost:8000';
 
 interface GeminiQueryProps {
   itemId: string;
   facilityId: string;
-  onClose: () => void;
 }
 
-export default function GeminiQuery({ itemId, facilityId, onClose }: GeminiQueryProps) {
+export default function GeminiQuery({ itemId, facilityId }: GeminiQueryProps) {
   const [query, setQuery] = useState('');
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -21,7 +20,7 @@ export default function GeminiQuery({ itemId, facilityId, onClose }: GeminiQuery
       .catch(console.error);
   }, [itemId, facilityId]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!query.trim() || !forecast) return;
     
@@ -42,7 +41,7 @@ export default function GeminiQuery({ itemId, facilityId, onClose }: GeminiQuery
       if (!res.ok) throw new Error('Failed to get explanation');
       const data = await res.json();
       setResponse(data.explanation);
-    } catch (err) {
+    } catch (err: Error) {
       setResponse('Unable to generate explanation at this time.');
     } finally {
       setLoading(false);

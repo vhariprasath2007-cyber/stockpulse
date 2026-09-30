@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import FacilityOverview from './components/FacilityOverview';
 import FacilityDetail from './components/FacilityDetail';
 import RecommendationPanel from './components/RecommendationPanel';
 import GeminiQuery from './components/GeminiQuery';
 import './index.css';
-
-const API_BASE = 'http://localhost:8000';
 
 function App() {
   const [view, setView] = useState<'overview' | 'detail'>('overview');

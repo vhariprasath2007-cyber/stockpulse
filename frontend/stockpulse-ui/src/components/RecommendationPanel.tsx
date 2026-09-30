@@ -45,7 +45,7 @@ export default function RecommendationPanel({ itemId, facilityId, onClose, onApp
         }
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err: Error) => {
         setError(err.message);
         setLoading(false);
       });
@@ -98,7 +98,7 @@ export default function RecommendationPanel({ itemId, facilityId, onClose, onApp
       if (!res.ok) throw new Error('Failed to apply transfer');
       await res.json();
       onApply();
-    } catch (err) {
+    } catch (err: Error) {
       setError(err.message);
       setApplying(false);
     }
