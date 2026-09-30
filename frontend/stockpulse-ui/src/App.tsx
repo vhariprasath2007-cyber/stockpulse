@@ -3,6 +3,7 @@ import FacilityOverview from './components/FacilityOverview';
 import FacilityDetail from './components/FacilityDetail';
 import RecommendationPanel from './components/RecommendationPanel';
 import GeminiQuery from './components/GeminiQuery';
+import { API_BASE } from './config';
 import './index.css';
 
 function App() {
